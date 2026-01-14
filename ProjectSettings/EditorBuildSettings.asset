@@ -6,8 +6,23 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/DungeonGenerator.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/0.unity
+    guid: 7fa431836b968614aa70183bacb68495
+  - enabled: 1
+    path: Assets/Scenes/1.unity
+    guid: 2654ed11f948b964f81ddcf952bd3d9e
+  - enabled: 1
+    path: Assets/Scenes/2.unity
+    guid: 3ee04f77a7ff24040a9be3afb320fb89
+  - enabled: 1
+    path: Assets/Scenes/3.unity
+    guid: 33a9265d777a6194bb39518eb75d0800
+  - enabled: 1
+    path: Assets/Scenes/4.unity
+    guid: b54905eefc3cb84498b7dbca7fbb9871
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
