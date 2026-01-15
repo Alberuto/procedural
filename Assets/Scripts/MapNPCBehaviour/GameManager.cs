@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour {
 
     [Header("UI")]
     public TextMeshProUGUI scoreText, timeText, keyText;
-    public GameObject gameWinPanel,gameOverPanel;
+    public GameObject gameWinPanel,gameOverPanel, victoryFinalPanel;
     public GameObject player;
     public GameObject UI;
     public GameObject camara;
@@ -74,7 +74,7 @@ public class GameManager : MonoBehaviour {
             UpdateUI();
         }
     }
-    void UpdateUI() {
+    public void UpdateUI() {
 
         if (scoreText) scoreText.text = "Puntuacion: " + score;
         if (timeText) timeText.text = "Tiempo: " + Mathf.Floor(gameTime) + "s";
@@ -96,7 +96,19 @@ public class GameManager : MonoBehaviour {
     public void GameWin() {
 
         IsGameActive = false;
-        if (gameWinPanel) gameWinPanel.SetActive(true);
+        // ¡VICTORIA FINAL EN NIVEL 5!
+        if (nivel >= 4) {
+            // Juego completado - mostrar panel victoria final
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.victorySound);
+            victoryFinalPanel.SetActive(true);
+            Debug.Log("¡JUEGO COMPLETADO! Nivel máximo alcanzado.");
+        }
+        else {
+            // Nivel normal - preparar siguiente
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.levelUpSound);
+            Time.timeScale = 0f;
+            if (gameWinPanel) gameWinPanel.SetActive(true);
+        }
     }
     public void RestartGame() {
 

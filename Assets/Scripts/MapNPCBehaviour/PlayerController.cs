@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour {
     void OnTriggerEnter(Collider other) {
 
         if (other.CompareTag("Key")) {
-
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.keySound);
             GameManager.Instance.KeyCollected();
             Destroy(other.gameObject);
         }

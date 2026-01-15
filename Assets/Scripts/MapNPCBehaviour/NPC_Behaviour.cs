@@ -24,8 +24,11 @@ public class NPC_Behaviour : MonoBehaviour {
     void OnTriggerEnter(Collider other) {
 
         if (other.CompareTag("Player")) {
-
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.hitSound);
+            GameManager.Instance.score -= 5000;
+            GameManager.Instance.UpdateUI();
             GameManager.Instance.GameOver();
+            GameManager.Instance.NPCSpeed *= 0.7f;
         }
     }
 

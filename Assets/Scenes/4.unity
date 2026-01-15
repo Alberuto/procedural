@@ -2431,8 +2431,10 @@ MonoBehaviour:
   keyText: {fileID: 0}
   gameWinPanel: {fileID: 0}
   gameOverPanel: {fileID: 0}
+  victoryFinalPanel: {fileID: 0}
   player: {fileID: 0}
   UI: {fileID: 0}
+  camara: {fileID: 0}
   keysThisLevel: 1
 --- !u!4 &882911292
 Transform:
@@ -4704,7 +4706,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4bf4793111ccb2c40947198dfd0ce143, type: 2}
+  - {fileID: 2100000, guid: ff16612cfc364b740be1d79886e301ff, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
